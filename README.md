@@ -5,7 +5,7 @@ This is a personal portfolio website designed to showcase my web development pro
 ## Live Demo
 
 You can view the live version of the website here:  
-**[Link to be added once hosted]**
+**[I will add the link after hosting it.]**
 
 ## Description
 
@@ -13,20 +13,20 @@ This portfolio provides a comprehensive look at my journey in technology. It fea
 
 ## Features
 
-* **Home Section:** Engaging welcome message with "Learn about Me" and "Hire Me" call-to-action buttons.
+* **Home Section:** I put Engaging welcome message with "Learn about Me" and "Hire Me" call-to-action buttons.
 * **About Me Section:**
     * Interactive cards linking to dedicated pages for Skills, Education & Certifications, Resume, and Projects.
-    * Visually appealing reflection effect on the section title.
+    * I put visually appealing reflection effect on the section title.
 * **Contact Section:**
-    * Direct links to LinkedIn, GitHub, and Email.
-    * Stylish, glowing social media buttons.
+    * Direct links to LinkedIn (Direct Contact), GitHub (Portfolio), and Email (Direct Contact).
+    * I added stylish, glowing social media buttons.
 * **"Hire Me" Modal:** A pop-up modal activated by the "Hire Me" button, providing quick contact options.
 * **Responsive Design:** Adapts to different screen sizes for optimal viewing on desktops, tablets, and mobile phones.
 * **Smooth Scrolling:** Enhances navigation between sections.
 * **Dynamic Content:** The current year in the footer is automatically updated using JavaScript.
 * **SEO & Social Sharing:** Includes meta tags for search engine optimization and social media previews (Open Graph).
 
-## Technologies Used
+## Technologies I Used
 
 * **HTML5:** For the structure and content of the website.
 * **CSS3:** For styling, layout (including Flexbox), gradients, transitions, and animations.
