@@ -65,41 +65,18 @@
     border-color: #1abc9c;
 }
 
-/* Add/Remove Project Buttons */
-.project-action-btn {
-    display: inline-block;
-    margin: 20px 12px 40px 12px;
-    padding: 14px 32px;
-    font-size: 1.1em;
-    font-family: inherit;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid #38ef7d;
-    background: linear-gradient(90deg, #23272f, #181c23);
-    color: #fff;
-    box-shadow: 0 0 16px 0 #38ef7d80;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s, border-color 0.3s;
-}
-.project-action-btn:hover {
-    background: linear-gradient(90deg, #181c23, #23272f);
-    transform: scale(1.05);
-    box-shadow: 0 0 32px 4px #38ef7d;
-    border-color: #1abc9c;
-}
-.add-btn {
-    border-color: #38ef7d;
-    box-shadow: 0 0 16px 0 #38ef7d80;
-}
-.add-btn:hover {
-    border-color: #1abc9c;
-    box-shadow: 0 0 32px 4px #38ef7d;
-}
-.remove-btn {
-    border-color: #b21625;
-    box-shadow: 0 0 16px 0 #b2162580;
-}
-.remove-btn:hover {
-    border-color: #ff4d6d;
-    box-shadow: 0 0 32px 4px #ff4d6d;
+/* Responsive Design */
+@media (max-width: 700px) {
+    .projects h1 {
+        font-size: 2.2rem;
+    }
+    .project-card {
+        max-width: 95vw;
+    }
+    .project-card h2 {
+        font-size: 1.5rem;
+    }
+    .project-card p {
+        font-size: 1rem;
+    }
 }

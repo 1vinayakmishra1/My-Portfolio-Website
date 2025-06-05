@@ -5,7 +5,7 @@ This is a personal portfolio website designed to showcase my web development pro
 ## Live Demo
 
 You can view the live version of the website here:  
-**[I will add the link after hosting it.]**
+[https://1vinayakmishra1.github.io/My-Portfolio-Website/]
 
 ## Description
 
@@ -41,21 +41,22 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ```
 My-Portfolio-Website/
 ├── assets/                        # Static assets: images, icons, PDFs, etc.
-├── /css/                           # All CSS files for styling different sections and pages
+├── css/                           # All CSS files for styling
 │   ├── common.css
 │   ├── education-certifications.css
 │   ├── home.css
 │   ├── projects.css
 │   ├── resume.css
 │   └── skills.css
+├── index/                         # All HTML pages except the main landing page
+│   ├── education-certifications.html
+│   ├── projects.html
+│   ├── resume.html
+│   └── skills.html
 ├── index.html                     # Home page (main landing page)
-├── education-certifications.html  # Education & Certifications page
-├── projects.html                  # Projects showcase page
-├── resume.html                    # Resume page (links to/downloads your resume PDF)
-├── skills.html                    # Skills overview page
 ├── .gitignore
 ├── .gitattributes
-├── LICENSE                        # License file
+├── LICENSE
 └── README.md                      # This documentation file
 ```
 
@@ -65,12 +66,9 @@ My-Portfolio-Website/
     - Images (e.g., `logo.png`, `preview.png`, `favicon.ico`)
     - Icons (SVG/PNG)
     - PDFs (e.g., `Vinayak_Mishra_Resume.pdf`)
-- **../css/**: All CSS files for styling different sections and pages.
+- **css/**: All CSS files for styling different sections and pages.
+- **index/**: Contains all HTML pages except the main landing page.
 - **index.html**: Main landing page (Home).
-- **education-certifications.html**: Education & Certifications page (shows your academic background and certifications).
-- **projects.html**: Projects showcase page (shows projects you have created).
-- **resume.html**: Resume page (links to or downloads your resume PDF).
-- **skills.html**: Skills overview page (lists your technical and soft skills).
 - **LICENSE**: License file.
 - **README.md**: This documentation file.
 
@@ -95,7 +93,7 @@ To view the website locally:
 * **Meta Tags:**
     * In `index.html`, replace the placeholder `og:url` with your live portfolio URL.
     * Replace the placeholder `og:image` with a URL to an actual preview image for your portfolio.
-* **Styling:** Modify the CSS files in `../css/` (`common.css`, `projects.css`, `skills.css`, etc.) to change the appearance.
+* **Styling:** Modify the CSS files in `css/` (`common.css`, `projects.css`, `skills.css`, etc.) to change the appearance.
 * **Contact Links:** Update the `href` attributes in the contact section and the "Hire Me" modal in `index.html` with your actual social media and email links.
 * **Resume PDF:** Place your resume PDF in the `assets/` folder and ensure the link in `resume.html` points to the correct file name.
 

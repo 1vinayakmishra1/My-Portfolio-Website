@@ -35,12 +35,22 @@
     <main>
         <section id="projects" class="projects">
             <h1>My Projects</h1>
-            <div class="project-buttons">
-                <button class="project-action-btn add-btn" onclick="openModal()">Add Project</button>
-                <button class="project-action-btn remove-btn" onclick="removeProject()">Remove Project</button>
-            </div>
-            <div id="noProjectsMsg" style="margin: 40px 0; color: #ccc; font-size: 1.3em; display: none;">
-                This user has no projects.
+            <div class="projects-list">
+                <div class="project-card">
+                    <h2>MY-PORTFOLIO-WEBSITE</h2>
+                    <p>Designed and built a responsive portfolio site to showcase projects, skills, and contact info. 
+Implemented modern UI design principles and ensured mobile-friendly layout with CSS Flexbox and 
+Grid. ( This Website ) </p>
+                    <a href="https://1vinayakmishra1.github.io/My-Portfolio-Website/" class="btn" target="_blank" rel="noopener">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h2>Task Manager App</h2>
+                    <p>Built a task manager with React frontend and PHP/MySQL backend to handle task CRUD operations. 
+Implemented tag-based filtering and persistent storage via MySQL. Gained experience connecting 
+frontend with backend APIs and handling database queries.</p>
+                    <a href="https://github.com/yourusername/project2" class="btn" target="_blank" rel="noopener">View Project</a>
+                </div>
+                <!-- Add more project-card blocks as needed -->
             </div>
         </section>
 
@@ -81,28 +91,7 @@
             </div>
         </section>
 
-        <!-- Add Project Modal -->
-        <div id="addProjectModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center;">
-          <form id="projectForm" style="background:#23272f; padding:32px 24px; border-radius:12px; max-width:350px; margin:auto; color:#fff; display:flex; flex-direction:column; gap:16px;">
-            <h2 style="margin:0 0 10px 0;">Add New Project</h2>
-            <input type="text" id="projectTitle" placeholder="Project Title" required style="padding:8px; border-radius:6px; border:none;">
-            <textarea id="projectDesc" placeholder="Project Description" style="padding:8px; border-radius:6px; border:none; resize:vertical;"></textarea>
-            <input type="url" id="projectGitHub" placeholder="GitHub Link (https://...)" required style="padding:8px; border-radius:6px; border:none;">
-            <button type="submit" class="project-action-btn add-btn">Add</button>
-            <button type="button" onclick="closeModal()" class="project-action-btn remove-btn">Cancel</button>
-          </form>
-        </div>
-
-        <!-- Remove Project Modal -->
-        <div id="removeProjectModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center;">
-          <div style="background:#23272f; padding:32px 24px; border-radius:12px; max-width:350px; margin:auto; color:#fff; display:flex; flex-direction:column; gap:16px;">
-            <h2 style="margin:0 0 10px 0;">Remove a Project</h2>
-            <div id="projectListToRemove"></div>
-            <button type="button" onclick="closeRemoveModal()" class="project-action-btn remove-btn">Cancel</button>
-          </div>
-        </div>
-
-            <!-- Hire Me Modal -->
+        <!-- Hire Me Modal -->
         <div id="hireMeModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:3000; align-items:center; justify-content:center;">
           <div style="background:#23272f; padding:32px 24px; border-radius:12px; max-width:350px; margin:auto; color:#fff; display:flex; flex-direction:column; gap:18px; align-items:center;">
             <h2 style="margin:0 0 10px 0;">Thank You!</h2>
@@ -138,111 +127,29 @@
     <footer>
         <p>&copy; <span id="year"></span> Vinayak's Portfolio. All rights reserved.</p>
     </footer>
-
     <script>
-        document.querySelector('.add-btn').onclick = function() {
-            document.getElementById('addProjectModal').style.display = 'flex';
-        };
+        // Year in footer
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-        function closeModal() {
-            document.getElementById('addProjectModal').style.display = 'none';
-        }
-
-        document.getElementById('projectForm').onsubmit = function(e) {
-            e.preventDefault();
-            const title = document.getElementById('projectTitle').value.trim();
-            const desc = document.getElementById('projectDesc').value.trim();
-            const github = document.getElementById('projectGitHub').value.trim();
-            if (title && github) {
-                let projects = JSON.parse(localStorage.getItem('projects') || '[]');
-                projects.push({ title, desc, github });
-                localStorage.setItem('projects', JSON.stringify(projects));
-                addProjectToDOM(title, desc, github, true);
-                closeModal();
-                this.reset();
-            }
-        };
-
-        function addProjectToDOM(title, desc, github, isDynamic) {
-            const projectsSection = document.querySelector('.projects');
-            const newProject = document.createElement('div');
-            newProject.classList.add('project-card');
-            if (isDynamic) newProject.classList.add('dynamic');
-            newProject.innerHTML = `
-                <h2>${title}</h2>
-                ${desc ? `<p>${desc}</p>` : ""}
-                <a href="${github}" class="btn" target="_blank" rel="noopener">View Project</a>
-            `;
-            const buttons = document.querySelector('.project-buttons');
-            projectsSection.insertBefore(newProject, buttons);
-        }
-
-        document.querySelector('.remove-btn').onclick = function() {
-            const modal = document.getElementById('removeProjectModal');
-            const listDiv = document.getElementById('projectListToRemove');
-            listDiv.innerHTML = '';
-            let projects = JSON.parse(localStorage.getItem('projects') || '[]');
-            if (projects.length === 0) {
-                listDiv.innerHTML = '<p>No projects to remove.</p>';
-            } else {
-                projects.forEach((p, idx) => {
-                    const btn = document.createElement('button');
-                    btn.textContent = p.title;
-                    btn.className = 'project-action-btn remove-btn';
-                    btn.style.margin = '8px 0';
-                    btn.onclick = function() {
-                        removeProjectByIndex(idx);
-                        closeRemoveModal();
-                    };
-                    listDiv.appendChild(btn);
-                });
-            }
-            modal.style.display = 'flex';
-        };
-
-        function closeRemoveModal() {
-            document.getElementById('removeProjectModal').style.display = 'none';
-        }
-
-        function removeProjectByIndex(idx) {
-            let projects = JSON.parse(localStorage.getItem('projects') || '[]');
-            projects.splice(idx, 1);
-            localStorage.setItem('projects', JSON.stringify(projects));
-            refreshProjects();
-        }
-
-        function refreshProjects() {
-            document.querySelectorAll('.project-card.dynamic').forEach(card => card.remove());
-            let projects = JSON.parse(localStorage.getItem('projects') || '[]');
-            if (projects.length === 0) {
-                document.getElementById('noProjectsMsg').style.display = 'block';
-            } else {
-                document.getElementById('noProjectsMsg').style.display = 'none';
-                projects.forEach(p => addProjectToDOM(p.title, p.desc, p.github, true));
-            }
-        }
-
-        window.onload = function() {
-            refreshProjects();
-            var yearSpan = document.getElementById('year');
-            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-        };
-
+        // Hire Me modal logic
         const hireMeButtonProjects = document.querySelector('.navbar .hire-me');
         if (hireMeButtonProjects) {
             hireMeButtonProjects.addEventListener('click', function() {
                 document.getElementById('hireMeModal').style.display = 'flex';
             });
         }
-
         function closeHireMeModal() {
             document.getElementById('hireMeModal').style.display = 'none';
         }
-        hireMeModal.addEventListener('click', function(event) {
-            if (event.target === hireMeModal) {
-                closeHireMeModal();
-            }
-        });
+        const hireMeModal = document.getElementById('hireMeModal');
+        if (hireMeModal) {
+            hireMeModal.addEventListener('click', function(event) {
+                if (event.target === hireMeModal) {
+                    closeHireMeModal();
+                }
+            });
+        }
     </script>
 </body>
 </html>
