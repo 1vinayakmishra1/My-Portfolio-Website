@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vinayak's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Website">    
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Vinayak's Portfolio">
+    <meta property="og:description" content="A showcase of Vinayak's projects and journey in technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com/">
+    <meta property="og:image" content="https://your-portfolio-url.com/preview-image.jpg">
+
+    <link rel="icon" href="/assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/portfolio-Website/css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="name">Vinayak</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/portfolio-Website/index/projects.html">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to My Portfolio</h1>
+            <p>
+                Hi, I'm Vinayak, a passionate web developer exploring the world of technology. Here's a glimpse of my journey and
+                projects.
+            </p>
+            <a href="#aboutme" class="button">Learn about Me</a>
+            <a href="#" class="button" id="hireMeBtn">Hire Me</a>
+        </section>
+
+        <section id="aboutme">
+            <h2 class="aboutme-title-reflect" data-text="Everything you should know about me">
+                Everything you should know about me
+            </h2>
+            <div class="aboutme-space"></div>
+            <div class="aboutme-cards">
+                <a href="/portfolio-Website/index/skills.html">
+                    <div class="skills-card">
+                        <span class="aboutme-card-icon">🛠️</span>
+                        <span class="aboutme-card-title">Skills</span>
+                    </div>
+                </a>
+                <a href="/portfolio-Website/index/education-certifications.html">
+                    <div class="education-card">
+                        <span class="aboutme-card-icon">🎓</span>
+                        <span class="aboutme-card-title">Education & Certifications</span>
+                    </div>
+                </a>
+                <a href="/portfolio-Website/index/resume.html">
+                    <div class="resume-card">
+                        <span class="aboutme-card-icon">📄</span>
+                        <span class="aboutme-card-title">Resume</span>
+                    </div>
+                </a>
+                <a href="/portfolio-Website/index/projects.html">
+                    <div class="projects-card">
+                        <span class="aboutme-card-icon">💼</span>
+                        <span class="aboutme-card-title">Projects</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to reach out via email or connect with me on social media. Let's collaborate and create something amazing!
+            </p>
+            <div class="contact-buttons">
+                <div class="contact-btn-wrap">
+                    <a href="https://www.linkedin.com/in/vinayak-mishra-775bb0255" target="_blank" aria-label="LinkedIn" class="contact-btn linkedin">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <title>LinkedIn</title>
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.004 3.604 4.609v5.587z"/>
+                        </svg>
+                    </a>
+                    <span class="contact-btn-label">LinkedIn<br>(Direct Contact)</span>
+                </div>
+                <div class="contact-btn-wrap">
+                    <a href="https://github.com/1vinayakmishra1" target="_blank" aria-label="GitHub" class="contact-btn github">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <title>GitHub</title>
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <span class="contact-btn-label">GitHub<br>(Portfolio)</span>
+                </div>
+                <div class="contact-btn-wrap">
+                    <a href="mailto:vinayak23mishra@gmail.com" aria-label="Email" class="contact-btn email">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <title>Email</title>
+                            <path d="M12 13.065l-11.99-8.065v17h24v-17l-12.01 8.065zm11.99-10.065h-23.98l11.99 8.065 11.99-8.065z"/>
+                        </svg>
+                    </a>
+                    <span class="contact-btn-label">Email<br>(Direct Contact)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hire Me Modal -->
+        <div id="hireMeModal">
+          <div class="hire-modal-content">
+            <h2>Thank You!</h2>
+            <p style="text-align:center;">
+              Thank you for your interest in hiring me!<br>
+              Please contact me through any of the following platforms:
+            </p>
+            <div class="popup-contact-buttons">
+              <div class="popup-btn-wrap">
+                <a href="https://www.linkedin.com/in/vinayak-mishra-775bb0255" target="_blank" aria-label="LinkedIn" class="contact-btn linkedin">
+                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><title>LinkedIn</title><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.004 3.604 4.609v5.587z"/></svg>
+                </a>
+                <span class="popup-btn-label">Direct Contact</span>
+              </div>
+              <div class="popup-btn-wrap">
+                <a href="mailto:vinayak23mishra@gmail.com" aria-label="Email" class="contact-btn email">
+                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><title>Email</title><path d="M12 13.065l-11.99-8.065v17h24v-17l-12.01 8.065zm11.99-10.065h-23.98l11.99 8.065 11.99-8.065z"/></svg>
+                </a>
+                <span class="popup-btn-label">Direct Contact</span>
+              </div>
+              <div class="popup-btn-wrap">
+                <a href="https://github.com/1vinayakmishra1" target="_blank" aria-label="GitHub" class="contact-btn github">
+                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <span class="popup-btn-label">Portfolio</span>
+              </div>
+            </div>
+            <button onclick="closeHireMeModal()" class="modal-close">Close</button>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Vinayak's Portfolio. All rights reserved.</p>
+    </footer>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Hire Me Modal Logic
+        const hireMeBtn = document.getElementById('hireMeBtn');
+        const hireMeModal = document.getElementById('hireMeModal');
+
+        hireMeBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            hireMeModal.classList.add('active');
+            document.body.classList.add('modal-open');
+        });
+
+        function closeHireMeModal() {
+            hireMeModal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        hireMeModal.addEventListener('click', function(event) {
+            if (event.target === hireMeModal) {
+                closeHireMeModal();
+            }
+        });
+    </script>
+</body>
+</html>

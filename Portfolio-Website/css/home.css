@@ -1,0 +1,503 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #181c23;
+    color: #f8f8f8;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+#home {
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(135deg, #23272f, #181c23);
+    color: #f8f8f8;
+}
+#home h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #38ef7d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#home p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#aboutme {
+    padding: 150px 20px;
+    min-height: 60vh;
+    background: linear-gradient(135deg, #20232a, #23272f);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#aboutme h2.aboutme-title-reflect {
+    font-size: 2.8em;
+    color: #38ef7d;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+#aboutme a {
+    text-decoration: none;
+}
+.aboutme-title-reflect::after {
+    content: attr(data-text);
+    display: block;
+    color: #38ef7d;
+    opacity: 0.25;
+    transform: scaleY(-1);
+    margin-top: 8px;
+    filter: blur(2px);
+    background: linear-gradient(to bottom, rgba(56, 239, 125, 0.3) 0%, rgba(56, 239, 125, 0) 80%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+    font-size: 0.95em;
+    pointer-events: none;
+}
+.aboutme-space {
+    height: 30px;
+}
+.aboutme-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.skills-card {
+    background: linear-gradient(120deg, #23272f 80%, #11998e 120%);
+    box-shadow: 0 0 24px 0 #11998e80;
+}
+.skills-card:hover {
+    box-shadow: 0 0 64px 16px #11998e, 0 0 32px 8px #11998e80;
+}
+.education-card {
+    background: linear-gradient(120deg, #23272f 80%, #b21625 120%);
+    box-shadow: 0 0 24px 0 #b2162580;
+}
+.education-card:hover {
+    box-shadow: 0 0 64px 16px #b21625, 0 0 32px 8px #b2162580;
+}
+.resume-card {
+    background: linear-gradient(120deg, #23272f 80%, #9716aa 120%);
+    box-shadow: 0 0 24px 0 #9716aa80;
+}
+.resume-card:hover {
+    box-shadow: 0 0 64px 16px #9716aa, 0 0 32px 8px #9716aa80;
+}
+.projects-card {
+    background: linear-gradient(120deg, #23272f 80%, #0736d2 120%);
+    box-shadow: 0 0 24px 0 #0736d280;
+}
+.projects-card:hover {
+    box-shadow: 0 0 64px 16px #0736d2, 0 0 32px 8px #0736d280;
+}
+#aboutme a div {
+    position: relative;
+    color: #f8f8f8;
+    border-radius: 18px;
+    width: 220px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition:
+        background 0.3s,
+        transform 0.2s,
+        box-shadow 0.3s;
+    border: none;
+    z-index: 1;
+    overflow: visible;
+}
+#aboutme a div:hover {
+    transform: translateY(-10px) scale(1.04);
+}
+.aboutme-card-icon {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+}
+.aboutme-card-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 150px 20px;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    text-align: center;
+    color: #fff;
+}
+#contact h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#contact p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #f8f8f8;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+a.button {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 24px;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    border-radius: 10px;
+    border: 2px solid #38ef7d;
+    box-shadow: 0 0 16px 0 #38ef7d80;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s, border-color 0.3s;
+}
+a.button:last-of-type {
+    margin-right: 0;
+}
+a.button:hover {
+    background: linear-gradient(90deg, #181c23, #23272f);
+    transform: scale(1.05);
+    box-shadow: 0 0 32px 4px #38ef7d;
+    border-color: #1abc9c;
+}
+
+/* --- CONTACT BUTTONS: GLOWING CIRCULAR STYLE --- */
+.contact-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.contact-btn-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid #38a1f340;
+    box-shadow: 0 2px 12px 0 #0003, 0 0 0 2px #38ef7d20;
+    margin: 0 6px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.3s,
+        background 0.3s,
+        border-color 0.3s;
+    font-size: 2em;
+    text-decoration: none;
+    outline: none;
+}
+
+.contact-btn.linkedin:hover {
+    background: #38a1f3;
+    box-shadow: 0 0 32px 6px #38a1f3cc;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn.github:hover {
+    background: #24292e;
+    box-shadow: 0 0 32px 6px #fff8;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn.email:hover {
+    background: #ea4335;
+    box-shadow: 0 0 32px 6px #ea4335cc;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn svg {
+    color: #fff !important;
+    fill: #fff !important;
+    transition: color 0.3s, fill 0.3s;
+}
+.contact-btn-label {
+    position: absolute;
+    bottom: -44px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #fff;
+    color: #111;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 2;
+    box-shadow: 0 2px 8px #0002;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.contact-btn-wrap .contact-btn:hover + .contact-btn-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 700px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    #home h1 { font-size: 2.5em; }
+    #home p { font-size: 1.2em; }
+    #aboutme h2.aboutme-title-reflect { font-size: 2em; }
+    #contact h2 { font-size: 2.2em; }
+    #contact p { font-size: 1.1em; }
+
+    .aboutme-cards {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px !important;
+    }
+    #aboutme a div {
+        width: 90vw;
+        max-width: 320px;
+        min-width: 180px;
+        height: auto;
+        padding: 20px;
+    }
+    .aboutme-card-icon { font-size: 2em; }
+    .aboutme-card-title { font-size: 1.1em; }
+
+    a.button {
+        padding: 12px 24px;
+        font-size: 1.1em;
+        margin-right: 10px;
+    }
+    .contact-buttons {
+        flex-wrap: wrap;
+    }
+    .contact-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* --- HIRE ME MODAL POPUP STYLE --- */
+#hireMeModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    pointer-events: none;
+}
+
+#hireMeModal.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hire-modal-content {
+    background: rgba(35, 39, 47, 0.92);
+    backdrop-filter: blur(8px) saturate(1.2);
+    padding: 32px 24px;
+    border-radius: 16px;
+    max-width: 350px;
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    box-shadow: 0 8px 32px 0 #0000004d, 0 0 0 2px #38ef7d30;
+    border: 1.5px solid #38ef7d40;
+    animation: modalPopIn 0.3s cubic-bezier(.5,1.8,.5,1) 1;
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+#hireMeModal.active .hire-modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.hire-modal-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    color: #38ef7d;
+}
+
+.hire-modal-content p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+@keyframes modalPopIn {
+    0% { transform: scale(0.85) translateY(40px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    background: rgba(35, 39, 47, 0.85);
+    color: #fff;
+    border: 2px solid #ea4335;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 16px 0 #ea433580;
+    font-family: inherit;
+    backdrop-filter: blur(4px) saturate(1.2);
+}
+.modal-close:hover {
+    background: rgba(35, 39, 47, 1);
+    border-color: #d93025;
+    transform: scale(1.05);
+    box-shadow: 0 0 32px 4px #ea4335cc;
+}
+
+/* --- POPUP CONTACT BUTTONS (within Hire Me Modal) --- */
+.popup-contact-buttons {
+    display: flex;
+    gap: 18px;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.popup-btn-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-contact-buttons .contact-btn {
+    width: 48px;
+    height: 48px;
+}
+
+.popup-btn-label {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(35,39,47,0.92);
+    color: #38ef7d;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 2;
+    box-shadow: 0 2px 8px #00000099;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Show label when the .contact-btn (within popup-btn-wrap) itself is hovered */
+.popup-btn-wrap .contact-btn:hover + .popup-btn-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

@@ -1,0 +1,85 @@
+/* Resume Display Section */
+.resume-display-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #20232a, #23272f);
+    color: #fff;
+}
+
+.resume-display-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #38ef7d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container for the embedded resume to give it a card-like appearance */
+.resume-document-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    margin-bottom: 30px;
+    max-width: 700px;
+    height: 85vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background: #2a2f36;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 24px 0 rgba(151, 22, 170, 0.5);
+    transition: box-shadow 0.4s ease-in-out;
+    animation: subtleGlowAnimation 4s infinite alternate ease-in-out;
+    box-sizing: border-box;
+}
+
+.resume-document-container:hover {
+    box-shadow: 0 0 40px 10px rgba(151, 22, 170, 0.7);
+}
+
+@keyframes subtleGlowAnimation {
+    0% {
+        box-shadow: 0 0 20px 0px rgba(151, 22, 170, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 35px 8px rgba(151, 22, 170, 0.6);
+    }
+}
+
+.resume-iframe {
+    display: block;
+    width: 100%;
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Styling for the download resume button */
+.download-resume-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #fff;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    border: 2px solid #38ef7d;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 16px 0 #38ef7d80;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s, border-color 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.download-resume-btn:hover {
+    background: linear-gradient(90deg, #181c23, #23272f);
+    transform: scale(1.05);
+    box-shadow: 0 0 32px 4px #38ef7d;
+    border-color: #1abc9c;
+}

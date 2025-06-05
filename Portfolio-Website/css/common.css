@@ -1,0 +1,376 @@
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #181c23;
+    color: #f8f8f8;
+    transition: background 0.5s ease, color 0.5s ease;
+    padding-top: 60px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #1abc9c;
+}
+
+.btn.resume-button-style,
+.navbar .hire-me {
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #fff;
+    border: 2px solid #38ef7d;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 0 16px 0 #38ef7d80;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s, border-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+.btn.resume-button-style:hover,
+.navbar .hire-me:hover {
+    background: linear-gradient(90deg, #181c23, #23272f);
+    box-shadow: 0 0 32px 4px #38ef7d;
+    border-color: #1abc9c;
+    transform: scale(1.05);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 150px 20px;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    text-align: center;
+    color: #fff;
+}
+#contact h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#contact p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #f8f8f8;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+a.button {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 24px;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    border-radius: 10px;
+    border: 2px solid #38ef7d;
+    box-shadow: 0 0 16px 0 #38ef7d80;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s, border-color 0.3s;
+}
+a.button:last-of-type {
+    margin-right: 0;
+}
+a.button:hover {
+    background: linear-gradient(90deg, #181c23, #23272f);
+    transform: scale(1.05);
+    box-shadow: 0 0 32px 4px #38ef7d;
+    border-color: #1abc9c;
+}
+
+/* --- CONTACT BUTTONS: GLOWING CIRCULAR STYLE --- */
+.contact-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.contact-btn-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid #38a1f340;
+    box-shadow: 0 2px 12px 0 #0003, 0 0 0 2px #38ef7d20;
+    margin: 0 6px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.3s,
+        background 0.3s,
+        border-color 0.3s;
+    font-size: 2em;
+    text-decoration: none;
+    outline: none;
+}
+
+.contact-btn.linkedin:hover {
+    background: #38a1f3;
+    box-shadow: 0 0 32px 6px #38a1f3cc;
+    transform: scale(1.12);
+    border-color: #fff;
+}
+.contact-btn.github:hover {
+    background: #24292e;
+    box-shadow: 0 0 32px 6px #fff8;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn.email:hover {
+    background: #ea4335;
+    box-shadow: 0 0 32px 6px #ea4335cc;
+    transform: scale(1.12);
+    border-color: #fff;
+}
+.contact-btn svg {
+    color: #fff !important;
+    fill: #fff !important;
+    transition: color 0.3s, fill 0.3s;
+}
+.contact-btn-label {
+    position: absolute;
+    bottom: -44px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #fff;
+    color: #111;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 2;
+    box-shadow: 0 2px 8px #0002;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.contact-btn-wrap .contact-btn:hover + .contact-btn-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Styles for the contact buttons within the Hire Me modal */
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid #38a1f340;
+    box-shadow: 0 2px 12px 0 #0003, 0 0 0 2px #38ef7d20;
+    margin: 0 6px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.3s,
+        background 0.3s,
+        border-color 0.3s;
+    font-size: 2em;
+    text-decoration: none;
+    outline: none;
+}
+
+.contact-btn.linkedin:hover {
+    background: #38a1f3;
+    box-shadow: 0 0 32px 6px #38a1f3cc;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn.github:hover {
+    background: #24292e;
+    box-shadow: 0 0 32px 6px #fff8;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn.email:hover {
+    background: #ea4335;
+    box-shadow: 0 0 32px 6px #ea4335cc;
+    transform: scale(1.12);
+    border-color: #fff;
+    color: #fff;
+}
+.contact-btn svg {
+    color: #fff !important;
+    fill: #fff !important;
+    transition: color 0.3s, fill 0.3s;
+}
+
+/* --- HIRE ME MODAL POPUP STYLE --- */
+
+.modal-close {
+    background: rgba(35, 39, 47, 0.85);
+    color: #fff;
+    border: 2px solid #ea4335;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 16px 0 #ea433580;
+    font-family: inherit;
+    backdrop-filter: blur(4px) saturate(1.2);
+}
+.modal-close:hover {
+    background: rgba(35, 39, 47, 1);
+    border-color: #ea4335;
+    transform: scale(1.05);
+    box-shadow: 0 0 32px 4px #ea4335cc;
+}
+
+/* --- POPUP CONTACT BUTTONS (within Hire Me Modal) --- */
+.popup-contact-buttons {
+    display: flex;
+    gap: 18px;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.popup-btn-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-btn-label {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(35,39,47,0.92);
+    color: #38ef7d;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 2;
+    box-shadow: 0 2px 8px #0006;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Show label when the .contact-btn (within popup-btn-wrap) itself is hovered */
+.popup-btn-wrap .contact-btn:hover + .popup-btn-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(90deg, #23272f, #181c23);
+    color: #f8f8f8;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .education-certifications-section h1 {
+        font-size: 2.5rem;
+    }
+    .certificate-card {
+        max-width: 90%;
+    }
+    .certificate-card h2 {
+        font-size: 1.8rem;
+    }
+    .certificate-card p {
+        font-size: 1rem;
+    }
+    .navbar .hire-me {
+        margin-right: 10px;
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    #contact h2 {
+        font-size: 2.5em;
+    }
+    #contact p {
+        font-size: 1.1em;
+    }
+    .contact-buttons a {
+        width: 48px;
+        height: 48px;
+    }
+    .popup-contact-buttons {
+        gap: 12px;
+    }
+    .contact-btn {
+        width: 48px;
+        height: 48px;
+    }
+}

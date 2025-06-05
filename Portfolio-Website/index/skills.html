@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Skills - Vinayak's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vinayak Mishra's skills and expertise in web development, including programming languages, frameworks, and tools.">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Vinayak Mishra's Skills">
+    <meta property="og:description" content="A showcase of Vinayak Mishra's skills and technologies used in web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com/skills.html">
+    <meta property="og:image" content="https://your-portfolio-url.com/skills-preview.jpg">
+
+    <link rel="stylesheet" href="/portfolio-Website/css/common.css">
+    <link rel="stylesheet" href="/portfolio-Website/css/skills.css">
+    <link rel="icon" href="/assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/portfolio-Website/index/home.html">Home</a>
+            <a href="/portfolio-Website/index/projects.html">Projects</a>
+            <a href="/portfolio-Website/index/education-certifications.html">Education & Certifications</a>
+
+        </div>
+        <div class="navbar-actions">
+            <a href="/portfolio-Website/index/resume.html" class="btn resume-button-style" aria-label="View Resume">Resume</a>
+            <button class="btn hire-me" aria-label="Hire Me">Hire Me</button>
+        </div>
+    </nav>
+ 
+    <main>
+        <section id="skills" class="skills-section">
+            <h1>My Skills & Technologies</h1>
+            <p class="skills-intro">
+                I am proficient in a diverse range of technologies and frameworks, continuously enhancing my capabilities in areas like <span id="animated-skill" class="highlight">JavaScript</span>, to deliver innovative solutions.
+            </p>
+            <div class="skill-action-buttons">
+                <button class="skill-action-btn add-skill-btn" onclick="openAddSkillModal()">Add Skill</button>
+                <button class="skill-action-btn edit-main-skill-btn" onclick="openSelectSkillToEditModal()">Edit Skill</button> 
+                <button class="skill-action-btn remove-skill-btn" onclick="openRemoveSkillModal()">Remove Skill</button>
+            </div>
+            <div id="noSkillsMsg" style="display: none;">
+                Currently, no skills are listed. Add some to showcase your expertise!
+            </div>
+            <div class="skills-container">
+                <!-- Skills will be dynamically inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to reach out via email or connect with me on social media. Let's collaborate and create something amazing!
+            </p>
+            <div class="contact-buttons">
+                <div class="contact-btn-wrap">
+                    <a href="https://www.linkedin.com/in/vinayak-mishra-775bb0255" target="_blank" aria-label="LinkedIn" class="contact-btn linkedin">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <title>LinkedIn</title>
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.004 3.604 4.609v5.587z"/>
+                        </svg>
+                    </a>
+                    <span class="contact-btn-label">LinkedIn<br>(Direct Contact)</span>
+                </div>
+                <div class="contact-btn-wrap">
+                    <a href="https://github.com/1vinayakmishra1" target="_blank" aria-label="GitHub" class="contact-btn github">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <title>GitHub</title>
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <span class="contact-btn-label">GitHub<br>(Portfolio)</span>
+                </div>
+                <div class="contact-btn-wrap">
+                    <a href="mailto:vinayak23mishra@gmail.com" aria-label="Email" class="contact-btn email">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <title>Email</title>
+                            <path d="M12 13.065l-11.99-8.065v17h24v-17l-12.01 8.065zm11.99-10.065h-23.98l11.99 8.065 11.99-8.065z"/>
+                        </svg>
+                    </a>
+                    <span class="contact-btn-label">Email<br>(Direct Contact)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Modal -->
+        <div id="addSkillModal" class="modal-overlay">
+          <form id="addSkillForm">
+            <h2>Add New Skill</h2>
+            <input type="text" id="skillNameInput" placeholder="Skill Name (e.g., Python)" required>
+            <input type="text" id="skillCategoryInput" placeholder="Category (e.g., Programming Languages)" required>
+            <button type="submit" class="skill-action-btn add-skill-btn">Add Skill</button>
+            <button type="button" onclick="closeAddSkillModal()" class="skill-action-btn remove-skill-btn">Cancel</button>
+          </form>
+        </div>
+
+        <div id="removeSkillModal" class="modal-overlay">
+          <div> 
+            <h2>Remove a Skill</h2>
+            <div id="skillListToRemove"></div>
+            <button type="button" onclick="closeRemoveSkillModal()" class="skill-action-btn remove-skill-btn">Cancel</button>
+          </div>
+        </div>
+
+        <div id="selectSkillToEditModal" class="modal-overlay">
+          <div>
+            <h2>Select Skill to Edit</h2>
+            <div id="skillListToSelectForEdit" style="max-height: 300px; overflow-y: auto;"></div>
+            <button type="button" onclick="closeSelectSkillToEditModal()" class="skill-action-btn remove-skill-btn" style="margin-top:15px;">Cancel</button>
+          </div>
+        </div>
+
+        <div id="editSkillModal" class="modal-overlay">
+          <form id="editSkillForm">
+            <h2>Edit Skill</h2>
+            <input type="hidden" id="editSkillIndexInput">
+            <input type="text" id="editSkillNameInput" placeholder="Skill Name" required>
+            <input type="text" id="editSkillCategoryInput" placeholder="Category" required>
+            <button type="submit" class="skill-action-btn add-skill-btn">Save Changes</button>
+            <button type="button" onclick="closeEditSkillModal()" class="skill-action-btn remove-skill-btn">Cancel</button>
+          </form>
+        </div>
+
+        <!-- Hire Me Modal -->
+        <div id="hireMeModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:3000; align-items:center; justify-content:center;">
+          <div style="background:#23272f; padding:32px 24px; border-radius:12px; max-width:350px; margin:auto; color:#fff; display:flex; flex-direction:column; gap:18px; align-items:center;">
+            <h2 style="margin:0 0 10px 0;">Thank You!</h2>
+            <p style="text-align:center;">
+              Thank you for your interest in hiring me!<br>
+              Please contact me through any of the following platforms:
+            </p>
+            <div class="popup-contact-buttons">
+              <div class="popup-btn-wrap">
+                <a href="https://www.linkedin.com/in/vinayak-mishra-775bb0255" target="_blank" aria-label="LinkedIn" class="contact-btn linkedin">
+                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><title>LinkedIn</title><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.004 3.604 4.609v5.587z"/></svg>
+                </a>
+                <span class="popup-btn-label">Direct Contact</span>
+              </div>
+              <div class="popup-btn-wrap">
+                <a href="mailto:vinayak23mishra@gmail.com" aria-label="Email" class="contact-btn email">
+                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><title>Email</title><path d="M12 13.065l-11.99-8.065v17h24v-17l-12.01 8.065zm11.99-10.065h-23.98l11.99 8.065 11.99-8.065z"/></svg>
+                </a>
+                <span class="popup-btn-label">Direct Contact</span>
+              </div>
+              <div class="popup-btn-wrap">
+                <a href="https://github.com/1vinayakmishra1" target="_blank" aria-label="GitHub" class="contact-btn github">
+                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <span class="popup-btn-label">Portfolio</span>
+              </div>
+            </div>
+            <button onclick="closeHireMeModal()" class="modal-close">Close</button>
+          </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Vinayak's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let skillsData = [];
+        const defaultSkills = [
+            { name: "JavaScript (ES6+)", category: "Programming Languages" },
+            { name: "HTML5", category: "Programming Languages" },
+            { name: "CSS3", category: "Programming Languages" },
+            { name: "React", category: "Frameworks & Libraries" },
+            { name: "Node.js", category: "Frameworks & Libraries" },
+            { name: "Git & GitHub", category: "Tools & Platforms" },
+            { name: "VS Code", category: "Tools & Platforms" }
+        ];
+
+        const animatedSkillSpan = document.getElementById('animated-skill');
+        let animationSkillIndex = 0;
+        let skillAnimationInterval;
+
+        function loadSkills() {
+            const storedSkills = localStorage.getItem('userSkills');
+            if (storedSkills) {
+                skillsData = JSON.parse(storedSkills);
+            } else {
+                skillsData = [...defaultSkills];
+            }
+            if (!Array.isArray(skillsData) || skillsData.length === 0 && defaultSkills.length > 0) {
+                skillsData = [...defaultSkills];
+            }
+        }
+
+        function saveSkills() {
+            localStorage.setItem('userSkills', JSON.stringify(skillsData));
+        }
+
+        function renderSkills() {
+            const skillsContainer = document.querySelector('.skills-container');
+            const noSkillsMsg = document.getElementById('noSkillsMsg');
+            skillsContainer.innerHTML = '';
+
+            if (skillsData.length === 0) {
+                if (noSkillsMsg) noSkillsMsg.style.display = 'block';
+                if (skillsContainer) skillsContainer.style.display = 'none';
+                return;
+            }
+
+            if (noSkillsMsg) noSkillsMsg.style.display = 'none';
+            if (skillsContainer) skillsContainer.style.display = 'grid'; 
+
+            const categories = {};
+            skillsData.forEach(skill => {
+                if (!categories[skill.category]) {
+                    categories[skill.category] = [];
+                }
+                categories[skill.category].push(skill.name); 
+            });
+
+            for (const categoryName in categories) {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'skill-category';
+                const h2 = document.createElement('h2');
+                h2.textContent = categoryName;
+                categoryDiv.appendChild(h2);
+                const ul = document.createElement('ul');
+                categories[categoryName].forEach(skillName => { 
+                    const li = document.createElement('li');
+                    li.textContent = skillName; 
+                    ul.appendChild(li);
+                });
+                categoryDiv.appendChild(ul);
+                skillsContainer.appendChild(categoryDiv);
+            }
+        }
+
+        function updateAnimatedSkill() {
+            if (!animatedSkillSpan || skillsData.length === 0) {
+                if (animatedSkillSpan) animatedSkillSpan.textContent = "modern web technologies";
+                return;
+            }
+            animatedSkillSpan.style.opacity = 0;
+            setTimeout(() => {
+                animatedSkillSpan.textContent = skillsData[animationSkillIndex].name;
+                animatedSkillSpan.style.opacity = 1;
+                animationSkillIndex = (animationSkillIndex + 1) % skillsData.length;
+            }, 300);
+        }
+
+        function startSkillAnimation() {
+            if (skillAnimationInterval) clearInterval(skillAnimationInterval);
+            if (skillsData.length > 0) {
+                animationSkillIndex = 0;
+                updateAnimatedSkill();
+                skillAnimationInterval = setInterval(updateAnimatedSkill, 3000);
+            } else {
+                 if (animatedSkillSpan) animatedSkillSpan.textContent = "versatile technologies";
+            }
+        }
+
+        // Modal Functions
+        function openAddSkillModal() { document.getElementById('addSkillModal').style.display = 'flex'; }
+        function closeAddSkillModal() { document.getElementById('addSkillModal').style.display = 'none'; document.getElementById('addSkillForm').reset(); }
+
+        function openRemoveSkillModal() { populateRemoveSkillModal(); document.getElementById('removeSkillModal').style.display = 'flex'; }
+        function closeRemoveSkillModal() { document.getElementById('removeSkillModal').style.display = 'none'; }
+        
+        function openSelectSkillToEditModal() {
+            const listContainer = document.getElementById('skillListToSelectForEdit');
+            listContainer.innerHTML = '';
+
+            if (skillsData.length === 0) {
+                listContainer.innerHTML = '<p style="text-align:center; color:#ccc;">No skills available to edit.</p>';
+            } else {
+                skillsData.forEach((skill, index) => {
+                    const skillButton = document.createElement('button');
+                    skillButton.textContent = `${skill.name} (${skill.category})`;
+                    skillButton.className = 'skill-selection-item-btn';
+                    skillButton.onclick = () => {
+                        openEditSkillModal(index);
+                        closeSelectSkillToEditModal();
+                    };
+                    listContainer.appendChild(skillButton);
+                });
+            }
+            document.getElementById('selectSkillToEditModal').style.display = 'flex';
+        }
+
+        function closeSelectSkillToEditModal() {
+            document.getElementById('selectSkillToEditModal').style.display = 'none';
+        }
+
+
+        function openEditSkillModal(index) {
+            const skill = skillsData[index];
+            document.getElementById('editSkillIndexInput').value = index;
+            document.getElementById('editSkillNameInput').value = skill.name;
+            document.getElementById('editSkillCategoryInput').value = skill.category;
+            document.getElementById('editSkillModal').style.display = 'flex';
+        }
+        function closeEditSkillModal() { document.getElementById('editSkillModal').style.display = 'none'; document.getElementById('editSkillForm').reset(); }
+
+
+        window.onload = function() {
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            loadSkills();
+            renderSkills();
+            startSkillAnimation();
+
+            document.getElementById('addSkillForm').addEventListener('submit', handleAddSkillSubmit);
+            document.getElementById('editSkillForm').addEventListener('submit', handleEditSkillSubmit);
+        };
+ 
+        // Hire Me Modal logic
+        document.querySelector('.hire-me').onclick = function() {
+            document.getElementById('hireMeModal').style.display = 'flex';
+        };
+
+        function closeHireMeModal() {
+            document.getElementById('hireMeModal').style.display = 'none';
+        }
+        hireMeModal.addEventListener('click', function(event) {
+            if (event.target === hireMeModal) {
+                closeHireMeModal();
+            }
+        });
+
+        // Add Skill Logic
+        function handleAddSkillSubmit(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('skillNameInput');
+            const categoryInput = document.getElementById('skillCategoryInput');
+            const name = nameInput.value.trim();
+            const category = categoryInput.value.trim();
+
+            if (name && category) {
+                if (!skillsData.some(s => s.name.toLowerCase() === name.toLowerCase() && s.category.toLowerCase() === category.toLowerCase())) {
+                    skillsData.push({ name, category });
+                    saveSkills();
+                    renderSkills();
+                    startSkillAnimation();
+                    closeAddSkillModal();
+                } else {
+                    alert('This skill already exists in the specified category.');
+                }
+            } else {
+                alert('Please enter both skill name and category.');
+            }
+        }
+
+        // Edit Skill Logic
+        function handleEditSkillSubmit(event) {
+            event.preventDefault();
+            const index = document.getElementById('editSkillIndexInput').value;
+            const nameInput = document.getElementById('editSkillNameInput');
+            const categoryInput = document.getElementById('editSkillCategoryInput');
+            const name = nameInput.value.trim();
+            const category = categoryInput.value.trim();
+
+            if (name && category && index !== '') {
+                skillsData[parseInt(index)] = { name, category };
+                saveSkills();
+                renderSkills();
+                startSkillAnimation(); 
+                closeEditSkillModal();
+                populateRemoveSkillModal(); 
+            } else {
+                alert('Please ensure all fields are filled correctly.');
+            }
+        }
+
+        // Remove Skill Logic
+        function populateRemoveSkillModal() {
+            const listDiv = document.getElementById('skillListToRemove');
+            listDiv.innerHTML = '';
+            if (skillsData.length === 0) {
+                listDiv.innerHTML = '<p style="text-align:center;">No skills to remove.</p>';
+                return;
+            }
+            skillsData.forEach((skill, index) => {
+                const skillItem = document.createElement('div');
+                skillItem.innerHTML = `<span style="flex-grow: 1;">${skill.name} (${skill.category})</span>`;
+                
+                const editBtn = document.createElement('button');
+                editBtn.textContent = 'Edit';
+                editBtn.className = 'skill-action-btn add-skill-btn'; 
+                editBtn.style.marginRight = '8px'; 
+                editBtn.onclick = () => openEditSkillModal(index);
+
+                const removeBtn = document.createElement('button');
+                removeBtn.textContent = 'Remove';
+                removeBtn.className = 'skill-action-btn remove-skill-btn'; 
+                removeBtn.onclick = () => removeSkillByIndex(index);
+                skillItem.appendChild(editBtn);
+                skillItem.appendChild(removeBtn);
+                listDiv.appendChild(skillItem);
+            });
+        }
+
+        function removeSkillByIndex(index) {
+            skillsData.splice(index, 1);
+            saveSkills();
+            renderSkills();
+            startSkillAnimation();
+            populateRemoveSkillModal(); 
+            if (skillsData.length === 0) closeRemoveSkillModal();
+        }
+    </script>
+</body>
+</html>
