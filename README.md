@@ -53,6 +53,8 @@ My-Portfolio-Website/
 ├── projects.html                  # Projects showcase page
 ├── resume.html                    # Resume page (links to/downloads your resume PDF)
 ├── skills.html                    # Skills overview page
+├── .gitignore
+├── .gitattributes
 ├── LICENSE                        # License file
 └── README.md                      # This documentation file
 ```
