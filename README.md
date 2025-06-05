@@ -41,7 +41,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ```
 My-Portfolio-Website/
 ├── assets/                        # Static assets: images, icons, PDFs, etc.
-├── ../css/                           # All CSS files for styling different sections and pages
+├── /css/                           # All CSS files for styling different sections and pages
 │   ├── common.css
 │   ├── education-certifications.css
 │   ├── home.css
