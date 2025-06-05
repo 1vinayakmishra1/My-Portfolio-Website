@@ -13,13 +13,13 @@ This portfolio provides a comprehensive look at my journey in technology. It fea
 
 ## Features
 
-* **Home Section:** I put Engaging welcome message with "Learn about Me" and "Hire Me" call-to-action buttons.
+* **Home Section:** Engaging welcome message with "Learn about Me" and "Hire Me" call-to-action buttons.
 * **About Me Section:**
     * Interactive cards linking to dedicated pages for Skills, Education & Certifications, Resume, and Projects.
-    * I put visually appealing reflection effect on the section title.
+    * Visually appealing reflection effect on the section title.
 * **Contact Section:**
     * Direct links to LinkedIn (Direct Contact), GitHub (Portfolio), and Email (Direct Contact).
-    * I added stylish, glowing social media buttons.
+    * Stylish, glowing social media buttons.
 * **"Hire Me" Modal:** A pop-up modal activated by the "Hire Me" button, providing quick contact options.
 * **Responsive Design:** Adapts to different screen sizes for optimal viewing on desktops, tablets, and mobile phones.
 * **Smooth Scrolling:** Enhances navigation between sections.
@@ -34,53 +34,42 @@ This portfolio provides a comprehensive look at my journey in technology. It fea
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Project Structure
 
 ```
 My-Portfolio-Website/
-├── Portfolio-Website/
-│   ├── assets/
-│   │   ├── [images, icons, PDFs, SVGs, etc.]
-│   ├── css/
-│   │   ├── common.css
-│   │   ├── education-certifications.css
-│   │   ├── home.css
-│   │   ├── projects.css
-│   │   ├── resume.css
-│   │   └── skills.css
-│   └── index/
-│       ├── home.html
-│       ├── education-certifications.html
-│       ├── projects.html
-│       ├── resume.html
-│       └── skills.html
-├── LICENSE.md
-└── README.md
+├── assets/                        # Static assets: images, icons, PDFs, etc.
+├── css/                           # All CSS files for styling different sections and pages
+│   ├── common.css
+│   ├── education-certifications.css
+│   ├── home.css
+│   ├── projects.css
+│   ├── resume.css
+│   └── skills.css
+├── index.html                     # Home page (main landing page)
+├── education-certifications.html  # Education & Certifications page
+├── projects.html                  # Projects showcase page
+├── resume.html                    # Resume page (links to/downloads your resume PDF)
+├── skills.html                    # Skills overview page
+├── LICENSE                        # License file
+└── README.md                      # This documentation file
 ```
 
 **Details:**
 
-- **Portfolio-Website/**: Main project folder containing all website source files.
-    - **assets/**: Static assets such as:
-        - Images (e.g., `logo.png`, `preview.png`, `favicon.ico`)
-        - Icons (SVG/PNG)
-        - PDFs (e.g., `Vinayak_Mishra_Resume.pdf`)
-    - **css/**: All CSS files for styling different sections and pages.
-        - `common.css`: Shared/global styles.
-        - `education-certifications.css`: Styles for the Education & Certifications page.
-        - `home.css`: Styles for the Home page.
-        - `projects.css`: Styles for the Projects page.
-        - `resume.css`: Styles for the Resume page.
-        - `skills.css`: Styles for the Skills page.
-    - **index/**: All main HTML files for each section.
-        - `home.html`: Main landing page (Home).
-        - `education-certifications.html`: Education & Certifications page (shows your academic background and certifications).
-        - `projects.html`: Projects showcase page (shows projects you have created).
-        - `resume.html`: Resume page (links to or downloads your resume PDF).
-        - `skills.html`: Skills overview page (lists your technical and soft skills).
-- **LICENSE.md**: License file.
+- **assets/**: Static assets such as:
+    - Images (e.g., `logo.png`, `preview.png`, `favicon.ico`)
+    - Icons (SVG/PNG)
+    - PDFs (e.g., `Vinayak_Mishra_Resume.pdf`)
+- **css/**: All CSS files for styling different sections and pages.
+- **index.html**: Main landing page (Home).
+- **education-certifications.html**: Education & Certifications page (shows your academic background and certifications).
+- **projects.html**: Projects showcase page (shows projects you have created).
+- **resume.html**: Resume page (links to or downloads your resume PDF).
+- **skills.html**: Skills overview page (lists your technical and soft skills).
+- **LICENSE**: License file.
 - **README.md**: This documentation file.
 
 ## Setup
@@ -88,20 +77,27 @@ My-Portfolio-Website/
 To view the website locally:
 
 1. Clone this repository or download the files.
-2. Navigate to the `My-Portfolio-Website/Portfolio-Website/` directory.
-3. Open `index/home.html` in your preferred web browser.
+2. Open `index.html` in your preferred web browser.
+
+## Hosting on GitHub Pages
+
+1. Ensure all your HTML, CSS, and asset files are at the root of your repository (as shown above).
+2. Go to your repository's **Settings** > **Pages**.
+3. Under "Source", select the `main` branch and `/ (root)` folder.
+4. Save and wait a few minutes for your site to be published.
+5. Your portfolio will be live at `https://your-username.github.io/your-repo-name/`.
 
 ## Customization
 
-* **Personal Information:** Update your details in `Portfolio-Website/index/home.html` and the respective HTML files within the `Portfolio-Website/index/` directory.
+* **Personal Information:** Update your details in `index.html` and the respective HTML files.
 * **Meta Tags:**
-    * In `Portfolio-Website/index/home.html`, replace the placeholder `og:url` with your live portfolio URL.
+    * In `index.html`, replace the placeholder `og:url` with your live portfolio URL.
     * Replace the placeholder `og:image` with a URL to an actual preview image for your portfolio.
-* **Styling:** Modify the CSS files in `Portfolio-Website/css/` (`common.css`, `projects.css`, `skills.css`, etc.) to change the appearance.
-* **Contact Links:** Update the `href` attributes in the contact section and the "Hire Me" modal in `Portfolio-Website/index/home.html` with your actual social media and email links.
-* **Resume PDF:** Place your resume PDF in an appropriate location (e.g., `Portfolio-Website/index/` or a dedicated `assets/` folder) and ensure the link in `Portfolio-Website/index/resume.html` points to the correct file name.
+* **Styling:** Modify the CSS files in `css/` (`common.css`, `projects.css`, `skills.css`, etc.) to change the appearance.
+* **Contact Links:** Update the `href` attributes in the contact section and the "Hire Me" modal in `index.html` with your actual social media and email links.
+* **Resume PDF:** Place your resume PDF in the `assets/` folder and ensure the link in `resume.html` points to the correct file name.
 
 ---
 
-Feel free to further adjust the structure or add more details according to you!
-If you have any feed back feel free to reach out to me.
+Feel free to further adjust the structure or add more details according to your needs!  
+If you have any feedback, feel free to reach out to me.
