@@ -41,7 +41,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ```
 My-Portfolio-Website/
 ├── assets/                        # Static assets: images, icons, PDFs, etc.
-├── css/                           # All CSS files for styling different sections and pages
+├── ../css/                           # All CSS files for styling different sections and pages
 │   ├── common.css
 │   ├── education-certifications.css
 │   ├── home.css
@@ -65,7 +65,7 @@ My-Portfolio-Website/
     - Images (e.g., `logo.png`, `preview.png`, `favicon.ico`)
     - Icons (SVG/PNG)
     - PDFs (e.g., `Vinayak_Mishra_Resume.pdf`)
-- **css/**: All CSS files for styling different sections and pages.
+- **../css/**: All CSS files for styling different sections and pages.
 - **index.html**: Main landing page (Home).
 - **education-certifications.html**: Education & Certifications page (shows your academic background and certifications).
 - **projects.html**: Projects showcase page (shows projects you have created).
@@ -95,7 +95,7 @@ To view the website locally:
 * **Meta Tags:**
     * In `index.html`, replace the placeholder `og:url` with your live portfolio URL.
     * Replace the placeholder `og:image` with a URL to an actual preview image for your portfolio.
-* **Styling:** Modify the CSS files in `css/` (`common.css`, `projects.css`, `skills.css`, etc.) to change the appearance.
+* **Styling:** Modify the CSS files in `../css/` (`common.css`, `projects.css`, `skills.css`, etc.) to change the appearance.
 * **Contact Links:** Update the `href` attributes in the contact section and the "Hire Me" modal in `index.html` with your actual social media and email links.
 * **Resume PDF:** Place your resume PDF in the `assets/` folder and ensure the link in `resume.html` points to the correct file name.
 
